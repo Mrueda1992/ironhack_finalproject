@@ -1,15 +1,12 @@
 import re
-import numpy as np
 import pandas as pd
 import spacy
-import string
 import matplotlib.pyplot as plt
 import warnings
 from hdbscan import HDBSCAN
 from umap import UMAP
 from mpl_toolkits.mplot3d import Axes3D
 from spacy.lang.en.stop_words import STOP_WORDS
-from spacy.lang.en import English
 from sklearn.feature_extraction.text import TfidfVectorizer
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 from functools import reduce
@@ -63,7 +60,7 @@ def getClusters(umap):
 def clusters2D(dataset, params):
     plt.scatter(dataset.emb_1, dataset.emb_2, c=params)
     plt.show(block=False)
-    plt.pause(6)
+    plt.pause(3)
     plt.close(1)
 
 #Plot a 3D map to see cluster representations of tokenized words
@@ -86,7 +83,7 @@ def wordcloud(text):
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis("off")
     plt.show(block=False)
-    plt.pause(6)
+    plt.pause(3)
     plt.close(1)
 
 #Wordcloud of all articles and for articles in each cluster
