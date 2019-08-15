@@ -5,10 +5,9 @@ import matplotlib.pyplot as plt
 import warnings
 from hdbscan import HDBSCAN
 from umap import UMAP
-from mpl_toolkits.mplot3d import Axes3D
 from spacy.lang.en.stop_words import STOP_WORDS
 from sklearn.feature_extraction.text import TfidfVectorizer
-from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+from wordcloud import WordCloud
 from functools import reduce
 from time import sleep
 
@@ -64,11 +63,7 @@ def clusters2D(dataset, params):
     plt.close(1)
 
 #Plot a 3D map to see cluster representations of tokenized words
-def clusters3D(dataset):
-    fig = plt.figure(figsize=(10, 8))
-    ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(umap_df.emb_1, umap_df.emb_2, umap_df.emb_3, marker='*', c=word_clusters, s=20)
-    plt.show()
+
 
 #Get name of articles within each cluster
 def articlesinClusters(clusters):
