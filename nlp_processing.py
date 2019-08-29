@@ -1,8 +1,8 @@
 import re
 import pandas as pd
-import spacy
 import matplotlib.pyplot as plt
 import warnings
+import spacy
 from hdbscan import HDBSCAN
 from umap import UMAP
 from spacy.lang.en.stop_words import STOP_WORDS
@@ -66,11 +66,11 @@ def clusters2D(dataset, params):
 
 
 #Get name of articles within each cluster
-def articlesinClusters(clusters):
-    return file_unique_urls.title[word_clusters==clusters]
+def articlesinClusters(file, clusters):
+    return file.title[word_clusters==clusters]
 
-def textinClusters(clusters):
-    return file_unique_urls.text[word_clusters==clusters]
+def textinClusters(file, clusters):
+    return file.text[word_clusters==clusters]
 
 #Wordcloud
 def wordcloud(text):
