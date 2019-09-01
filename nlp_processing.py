@@ -62,9 +62,6 @@ def clusters2D(dataset, params):
     plt.pause(3)
     plt.close(1)
 
-#Plot a 3D map to see cluster representations of tokenized words
-
-
 #Get name of articles within each cluster
 def articlesinClusters(file, clusters):
     return file.title[word_clusters==clusters]
