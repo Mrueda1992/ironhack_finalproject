@@ -19,6 +19,7 @@ def unique_urls(file):
 #load nlp and words tokenizer function
 def words_tokenizer(text,repetidos=False):
     nlp = spacy.load('en_core_web_sm')
+    nlp.max_length = 1500000
     tokens = nlp(text)
     filtered_tokens = []
     for word in tokens:
@@ -78,6 +79,7 @@ def wordcloud(text):
     plt.pause(3)
     plt.close(1)
 
+
 #Wordcloud of all articles and for articles in each cluster
 def textWordcloud(lista):
     return wordcloud(' '.join(words_tokenizer(reduce((lambda x,y:x+y), lista.text), repetidos=True)))
@@ -85,6 +87,7 @@ def textWordcloud(lista):
 def clusterWordcloud(dataset):
     for x in set(dataset.n_clusters):
         textWordcloud(dataset[dataset.n_clusters==x])
+
 
 #Get dataframe of token words for each cluster
 def getDfCluster(cluster, file, umap):

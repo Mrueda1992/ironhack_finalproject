@@ -8,9 +8,8 @@ def main():
     umap_df = getUmap(vector_matrix, 3)
     word_clusters = getClusters(umap_df)
     file_unique_urls['n_clusters'] = word_clusters
-    textWordcloud(file_unique_urls)
     clusterWordcloud(file_unique_urls)
-    parse()
+
 
 if __name__== "__main__":
     main()
