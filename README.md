@@ -17,3 +17,23 @@ El proyecto consta de las siguientes fases:
 5. Reducción de dimensionalidad y clusterización con UMAP y HDBSCAN
 
 6. Creación de nube de palabras con Wordcloud
+
+## Resultados ##
+
+![alt-text](https://github.com/Mrueda1992/tags_creator/blob/master/images/cluster_0.png)
+
+![alt-text](https://github.com/Mrueda1992/tags_creator/blob/master/images/cluster_1.png)
+
+![alt-text](https://github.com/Mrueda1992/tags_creator/blob/master/images/cluster_2.png)
+
+![alt-text](https://github.com/Mrueda1992/tags_creator/blob/master/images/cluster_3.png)
+
+## To do's ##
+
+- Scrapear otras fuentes de información, guardar el scraping dentro de funciones que puedan ser llamadas en otras partes del programa.
+
+- Refactorizar código para mejorar tiempos de computación.
+
+- Introducir un GridSearch con diferentes parámetros para determinar los parámetros que mejor le vienen al modelo.
+
+- Pasar código por línea de comandos para extraer palabras más frecuentes de cada artículo.
